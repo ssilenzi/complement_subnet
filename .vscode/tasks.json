@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: clang++-14 build active file",
+            "command": "/usr/bin/clang++-14",
+            "args": [
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-I/usr/include/c++/11",
+                "-I/usr/include/x86_64-linux-gnu/c++/11",
+                "-L/usr/lib/gcc/x86_64-linux-gnu/11",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++-14"
+        },
+        {
+            "type": "shell",
+            "label": "C/C++: clang++-14 run active file",
+            "command": "${fileDirname}/${fileBasenameNoExtension}",
+            "problemMatcher": []
+        }
+    ]
+}
